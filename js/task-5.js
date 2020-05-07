@@ -5,16 +5,25 @@ const products = [
     { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
+// const getAllPropValues = function (arr, prop) {
+//     let values = [];
+//     for (const entry in arr) {
+//         for (const [key, value] of Object.entries(arr[entry])) {
+//             if (key === prop) {
+//                 values.push(value);
+//             }
+//         }
+//     }
+//     return values;
+// };
+
 const getAllPropValues = function (arr, prop) {
     let values = [];
-    for (const entry in arr) {
-        for (const [key, value] of Object.entries(arr[entry])) {
-            if (key === prop) {
-                values.push(value);
-            }
+    for (const entry of arr) {
+        if (entry[prop] !== undefined) {
+            values.push(entry[prop])
         }
-    }
-    return values;
+    } return values;
 };
 
 console.log(getAllPropValues(products, 'name'));

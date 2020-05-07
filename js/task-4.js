@@ -1,9 +1,20 @@
+// const countTotalSalary = function (employees) {
+//     let totalSalary = 0;
+//     let salaries = Object.values(employees);
+//     for (const salary in salaries) {
+//         totalSalary += salaries[salary];
+//     }
+//     return totalSalary;
+// };
+
+
 const countTotalSalary = function (employees) {
     let totalSalary = 0;
-    let salaries = Object.values(employees);
-    for (const salary in salaries) {
-        totalSalary += salaries[salary];
+
+    for (const salary of Object.values(employees)) {
+        totalSalary += salary;
     }
+
     return totalSalary;
 };
 
